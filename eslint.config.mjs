@@ -5,6 +5,7 @@ import reactPlugin from 'eslint-plugin-react';
 import jestPlugin from 'eslint-plugin-jest';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
 import pluginSecurity from 'eslint-plugin-security';
+import securityNode from 'eslint-plugin-security-node';
 import babelParser from '@babel/eslint-parser';
 
 export default defineConfig([
@@ -22,11 +23,13 @@ export default defineConfig([
     plugins: {
       react: reactPlugin,
       security: pluginSecurity,
+      'security-node': securityNode,
     },
     rules: {
       ...reactPlugin.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'security/detect-eval-with-expression': 'error',
+      'security-node/detect-crlf': 'error',
     },
     settings: {
       react: {
