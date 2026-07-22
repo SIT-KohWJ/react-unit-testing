@@ -1,5 +1,10 @@
 # **React Unit Testing with Jest and React Testing Library**
 
+> 📄 **Static Code Analysis (ICT2216 – Lab 8):** ESLint (with security plugins) and
+> GitHub CodeQL are configured for this project. See
+> [STATIC-ANALYSIS.md](STATIC-ANALYSIS.md) for the full setup, how to run it
+> locally (`npm run lint` / `npm run lint:sarif`), and the CI workflows.
+
 ### **What is Jest ?**
 Jest is a JavaScript testing framework that is used for unit testing, snapshot testing, and coverage reporting. Jest can be used to test React components, and it is also often used with React Native.
 

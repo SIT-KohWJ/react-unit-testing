@@ -16,7 +16,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "coverage": "react-scripts test -- --coverage --watchAll"
+    "coverage": "react-scripts test -- --coverage --watchAll",
+    "lint": "eslint .",
+    "lint:sarif": "mkdir -p reports && eslint . --format @microsoft/eslint-formatter-sarif --output-file reports/eslint-results.sarif"
   },
   "eslintConfig": {
     "extends": [
