@@ -7,6 +7,7 @@ import testingLibraryPlugin from 'eslint-plugin-testing-library';
 import pluginSecurity from 'eslint-plugin-security';
 import securityNode from 'eslint-plugin-security-node';
 import babelParser from '@babel/eslint-parser';
+import eslintPluginNoUnsanitized from 'eslint-plugin-no-unsanitized';
 
 export default defineConfig([
   {
@@ -24,9 +25,11 @@ export default defineConfig([
       react: reactPlugin,
       security: pluginSecurity,
       'security-node': securityNode,
+      'no-unsanitized': eslintPluginNoUnsanitized,
     },
     rules: {
       ...reactPlugin.configs.recommended.rules,
+      ...eslintPluginNoUnsanitized.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off',
       'security/detect-eval-with-expression': 'error',
       'security-node/detect-crlf': 'error',
